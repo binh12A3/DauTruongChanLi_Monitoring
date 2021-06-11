@@ -11,5 +11,7 @@ Demo : https://www.youtube.com/watch?v=TfoTJ82fOI8
 
 Download at : https://drive.google.com/file/d/1BxSX_UpwhvYvJsUYhLHTisBXUOiJdG83/view?fbclid=IwAR0QDwB0-MlCUHs0c2Y8JJsYbygXt5QfWvfXSQzPjBpYpuzNDPYzEvL_MjE
 
+NOTE : this tool need to be "Run as administrator"
+
 
 [![IMAGE ALT TEXT HERE](https://github.com/binh12A3/HinhAnhDemo/blob/main/DauTruongChanLy_Monitoring.png)](https://www.youtube.com/watch?v=TfoTJ82fOI8)
