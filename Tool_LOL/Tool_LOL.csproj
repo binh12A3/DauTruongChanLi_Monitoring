@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="pikachu_icon-icons.com_67535.ico" />
+    <None Include="Resources\exit.png" />
     <None Include="Resources\xeng.jpg" />
     <None Include="Resources\ghep_xeng.jpg" />
     <None Include="Resources\ghep_xeng_hac_am.png" />

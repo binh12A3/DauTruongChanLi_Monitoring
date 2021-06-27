@@ -55,7 +55,7 @@ namespace Tool_LOL
             }
             catch
             {
-                MessageBox.Show("There is an issue when installLicense(). Please contact \"binhmagic1995@gmail.com\" for support");
+                MessageBox.Show("There is an issue when installLicense(). Please contact \"binh.nguyenthanh1995@gmail.com\" for support");
                 Application.Exit();
             }
         }//end installLicense()
@@ -80,7 +80,7 @@ namespace Tool_LOL
                 }
                 else if (obj.cpuID != cpuInfo)
                 {
-                    MessageBox.Show("This License \"" + LicenseKey + "\" is used. Please contact \"binhmagic1995@gmail.com\" for purchasing new license");
+                    MessageBox.Show("This License \"" + LicenseKey + "\" is used. Please contact \"binh.nguyenthanh1995@gmail.com\" for purchasing new license");
                     Application.Exit();
                 }
                 else
@@ -91,7 +91,7 @@ namespace Tool_LOL
             }
             catch
             {
-                MessageBox.Show("This License \"" + LicenseKey + "\" is used. Please contact \"binhmagic1995@gmail.com\" for purchasing new license");
+                MessageBox.Show("This License \"" + LicenseKey + "\" is used. Please contact \"binh.nguyenthanh1995@gmail.com\" for purchasing new license");
                 Application.Exit();
             }
         }//end checkLicense()
@@ -130,6 +130,10 @@ namespace Tool_LOL
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.Location = new Point(500, 0);
+            this.Size = new Size(300, 50);
+
             //Get the location of the app
             Directory = Application.StartupPath;
 
@@ -168,7 +172,6 @@ namespace Tool_LOL
          * ##############################################################################################
          */
 
-        bool isShow = false;
         Thread newThread;
 
         private void buttonbuttonMonitor_Click(object sender, EventArgs e)
@@ -217,7 +220,7 @@ namespace Tool_LOL
 
         void captureImage(int loop)
         {
-            Mouse.Move(500, 500);
+            Mouse.Move(200, 200);
             Thread.Sleep(1000); ;
             Mouse.PressButton(Mouse.MouseKeys.Left);
             Thread.Sleep(300);
@@ -306,23 +309,6 @@ namespace Tool_LOL
 
             labelStatus.Text = "Ready";
         }//end captureImage
-
-
-
-        private void buttonTopMost_Click(object sender, EventArgs e)
-        {
-            isShow = !isShow;
-            if (isShow == true)
-            {
-                this.TopMost = true;
-                buttonTopMost.Image = Tool_LOL.Properties.Resources.eye;
-            }
-            else
-            {
-                this.TopMost = false;
-                buttonTopMost.Image = Tool_LOL.Properties.Resources.invisible;
-            }
-        }
 
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -474,6 +460,31 @@ namespace Tool_LOL
             pictureBoxXeng.Cursor = Cursors.Default;
         }
 
+        private void buttonResize_Click(object sender, EventArgs e)
+        {
+            int x = Cursor.Position.X;
+            int y = Cursor.Position.Y;
+            Console.WriteLine("x=" + x.ToString());
+            Console.WriteLine("y=" + y.ToString());
 
+            if (this.Width == 930 && this.Height == 1007)
+            {
+                this.Size = new Size(300, 50);
+                buttonResize.Image = Tool_LOL.Properties.Resources.eye;
+            }
+            else
+            {
+                this.Size = new Size(930, 1007);
+                //this.CenterToScreen();
+                this.Location = new Point(500, 0);
+                buttonResize.Image = Tool_LOL.Properties.Resources.invisible;
+            }
+
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
